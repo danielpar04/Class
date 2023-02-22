@@ -1,0 +1,25 @@
+//import 'dart:ffi';
+class Persona{
+  String nombre='null';
+  int edad=0;
+  Persona(this.nombre,this.edad);
+  void decirNombre(){
+    print("Mi nombre es: $nombre");
+  }
+}
+class Empleado extends Persona{
+Empleado(String nombre, int edad,int sueldo):super(nombre,edad);
+int sueldo=1500;
+
+void decirPyS(){
+  print("Soy $nombre estoy empleado y mi sueldo es de: $sueldo");
+}
+}
+void main (List<String> arguments){
+var jose = new Persona("jose",49);
+var maria = new Persona("maria",43);
+var juan =new Empleado("juan", 21,1500);
+juan.decirPyS();
+jose.decirNombre();
+maria.decirNombre();
+}
